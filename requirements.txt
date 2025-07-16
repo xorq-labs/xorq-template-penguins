@@ -7,10 +7,12 @@ atpublic==6.0.1
 attrs==25.3.0
 cachetools==5.5.2
 certifi==2025.7.14
+cffi==1.17.1
 charset-normalizer==3.4.2
 cityhash==0.4.8
 click==8.2.1
 cloudpickle==3.1.1
+cryptography==45.0.5
 dask==2025.1.0
 databackend==0.0.3
 decorator==5.2.1
@@ -74,6 +76,7 @@ pyarrow==20.0.0
 pyarrow-hotfix==0.7
 pyasn1==0.6.1
 pyasn1-modules==0.4.2
+pycparser==2.22
 pygments==2.19.2
 pytest==8.4.1
 pytest-mock==3.14.1
@@ -96,7 +99,7 @@ typing-extensions==4.14.1
 tzdata==2025.2
 urllib3==2.5.0
 wcwidth==0.2.13
-xorq==0.2.4
+xorq @ git+https://github.com/xorq-labs/xorq@18e5f1752808bb8e9cc7d80a1b000126e64419d7
 xorq-datafusion==0.2.3
 xxhash==3.5.0
 yarl==1.20.1
