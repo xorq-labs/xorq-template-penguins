@@ -9,6 +9,10 @@ from xorq.expr.ml.pipeline_lib import (
 )
 
 
+# stop-gap until xorq is fixed
+xo.expr.ml.pipeline_lib.step_typ_to_f[LogisticRegression] = xo.expr.ml.pipeline_lib.get_target_type
+
+
 features = ("bill_length_mm", "bill_depth_mm")
 target = "species"
 data_url = "https://storage.googleapis.com/letsql-pins/penguins/20250703T145709Z-c3cde/penguins.parquet"
