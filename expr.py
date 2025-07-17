@@ -10,15 +10,17 @@ from xorq.expr.ml.pipeline_lib import (
 
 
 # stop-gap until xorq is fixed
-xo.expr.ml.pipeline_lib.step_typ_to_f[LogisticRegression] = xo.expr.ml.pipeline_lib.get_target_type
+xo.expr.ml.pipeline_lib.step_typ_to_f[LogisticRegression] = (
+    xo.expr.ml.pipeline_lib.get_target_type
+)
 
 
 features = ("bill_length_mm", "bill_depth_mm")
 target = "species"
-data_url = "https://storage.googleapis.com/letsql-pins/penguins/20250703T145709Z-c3cde/penguins.parquet"
+data_url = "https://storage.googleapis.com/letsql-pins/penguins/20250206T212843Z-8f28a/penguins.csv"
 
 
-def gen_splits(expr, test_size=.2, random_seed=42, **split_kwargs):
+def gen_splits(expr, test_size=0.2, random_seed=42, **split_kwargs):
     # inject and drop row number
     assert "test_sizes" not in split_kwargs
     assert isinstance(test_size, float)
@@ -37,31 +39,28 @@ def gen_splits(expr, test_size=.2, random_seed=42, **split_kwargs):
 
 def get_penguins_splits(storage=None, **split_kwargs):
     t = (
-        xo.deferred_read_parquet(
-            con=xo.duckdb.connect(),
+        xo.deferred_read_csv(
+            con=xo.pandas.connect(),
             path=data_url,
             table_name="t",
         )
-        .select(features+(target,))
+        .into_backend(xo.duckdb.connect(), name="t")
+        .select(features + (target,))
         .drop_null()
     )
     (train, test) = (
-        expr
-        .cache(storage or ParquetStorage())
+        expr.cache(storage or ParquetStorage())
         for expr in gen_splits(t, **split_kwargs)
     )
     return (train, test)
 
 
 def make_pipeline(params=()):
-    clf = (
-        sklearn.pipeline.Pipeline(
-            steps=[
-                ("logistic", LogisticRegression()),
-            ]
-        )
-        .set_params(**dict(params))
-    )
+    clf = sklearn.pipeline.Pipeline(
+        steps=[
+            ("logistic", LogisticRegression()),
+        ]
+    ).set_params(**dict(params))
     return clf
 
 
@@ -70,10 +69,12 @@ def fit_and_score_sklearn_pipeline(pipeline, train, test):
         (X_train, y_train),
         (X_test, y_test),
     ) = (
-        expr.execute().pipe(lambda t: (
-            t.filter(regex=f"^(?!{target})"),
-            t.filter(regex=f"^{target}"),
-        ))
+        expr.execute().pipe(
+            lambda t: (
+                t.filter(regex=f"^(?!{target})"),
+                t.filter(regex=f"^{target}"),
+            )
+        )
         for expr in (train, test)
     )
     clf = pipeline.fit(X_train, y_train)
@@ -82,7 +83,7 @@ def fit_and_score_sklearn_pipeline(pipeline, train, test):
 
 
 params = {
-    "logistic__C": 1E-4,
+    "logistic__C": 1e-4,
 }
 (train, test) = get_penguins_splits()
 sklearn_pipeline = make_pipeline(params=params)
