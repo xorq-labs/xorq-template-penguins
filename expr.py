@@ -91,12 +91,7 @@ xorq_pipeline = Pipeline.from_instance(sklearn_pipeline)
 fitted_pipeline = xorq_pipeline.fit(train, features=features, target=target)
 #
 train_predicted = fitted_pipeline.fitted_steps[-1].predicted
-test[features].to_parquet("./to_predict.parquet")
-to_predict = xo.deferred_read_parquet(
-    con=xo.connect(),
-    path="./to_predict.parquet",
-    table_name="to_predict",
-)
+to_predict = test[features].cache(ParquetStorage())
 expr = test_predicted = fitted_pipeline.predict(to_predict)
 
 
