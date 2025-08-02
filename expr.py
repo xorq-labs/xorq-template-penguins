@@ -91,7 +91,13 @@ xorq_pipeline = Pipeline.from_instance(sklearn_pipeline)
 fitted_pipeline = xorq_pipeline.fit(train, features=features, target=target)
 #
 train_predicted = fitted_pipeline.fitted_steps[-1].predicted
-expr = test_predicted = fitted_pipeline.predict(test[features])
+test[features].to_parquet("./to_predict.parquet")
+to_predict = xo.deferred_read_parquet(
+    con=xo.connect(),
+    path="./to_predict.parquet",
+    table_name="to_predict",
+)
+expr = test_predicted = fitted_pipeline.predict(to_predict)
 
 
 if __name__ == "__pytest_main__":
