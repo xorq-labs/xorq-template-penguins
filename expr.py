@@ -2,7 +2,7 @@
 import sklearn
 from sklearn.linear_model import LogisticRegression
 
-import xorq as xo
+import xorq.api as xo
 from xorq.caching import ParquetStorage
 from xorq.expr.ml.pipeline_lib import (
     Pipeline,
@@ -10,7 +10,7 @@ from xorq.expr.ml.pipeline_lib import (
 
 
 # stop-gap until xorq is fixed
-xo.expr.ml.pipeline_lib.step_typ_to_f[LogisticRegression] = xo.expr.ml.pipeline_lib.get_target_type
+xo.expr.ml.pipeline_lib.registry.register(LogisticRegression, xo.expr.ml.pipeline_lib.get_target_type)
 
 
 features = ("bill_length_mm", "bill_depth_mm")
