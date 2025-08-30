@@ -99,7 +99,7 @@ typing-extensions==4.14.1
 tzdata==2025.2
 urllib3==2.5.0
 wcwidth==0.2.13
-xorq @ git+https://github.com/xorq-labs/xorq@18e5f1752808bb8e9cc7d80a1b000126e64419d7
+xorq @ git+https://github.com/xorq-labs/xorq@7d4c0328d7daf8341f8a3cfb65a4c944d37056ff
 xorq-datafusion==0.2.3
 xxhash==3.5.0
 yarl==1.20.1
