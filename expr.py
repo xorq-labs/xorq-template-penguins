@@ -9,10 +9,6 @@ from xorq.expr.ml.pipeline_lib import (
 )
 
 
-# stop-gap until xorq is fixed
-xo.expr.ml.pipeline_lib.registry.register(LogisticRegression, xo.expr.ml.pipeline_lib.get_target_type)
-
-
 features = ("bill_length_mm", "bill_depth_mm")
 target = "species"
 data_url = "https://storage.googleapis.com/letsql-pins/penguins/20250703T145709Z-c3cde/penguins.parquet"
@@ -22,12 +18,10 @@ def gen_splits(expr, test_size=.2, random_seed=42, **split_kwargs):
     # inject and drop row number
     assert "test_sizes" not in split_kwargs
     assert isinstance(test_size, float)
-    row_number = "row_number"
     yield from (
-        expr.drop(row_number)
+        expr
         for expr in xo.train_test_splits(
-            expr.mutate(**{row_number: xo.row_number()}),
-            unique_key=row_number,
+            expr,
             test_sizes=test_size,
             random_seed=random_seed,
             **split_kwargs,
