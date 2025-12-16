@@ -3,7 +3,7 @@ import sklearn
 from sklearn.linear_model import LogisticRegression
 
 import xorq.api as xo
-from xorq.caching import ParquetStorage
+from xorq.caching import ParquetCache
 from xorq.expr.ml.pipeline_lib import (
     Pipeline,
 )
@@ -41,7 +41,7 @@ def get_penguins_splits(storage=None, **split_kwargs):
     )
     (train, test) = (
         expr
-        .cache(storage or ParquetStorage())
+        .cache(storage or ParquetCache.from_kwargs())
         for expr in gen_splits(t, **split_kwargs)
     )
     return (train, test)
