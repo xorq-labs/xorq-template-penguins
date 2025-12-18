@@ -77,6 +77,7 @@ def fit_and_score_sklearn_pipeline(pipeline, train, test):
 
 params = {
     "logistic__C": 1E-4,
+    "logistic__penalty": "l2",
 }
 (train, test) = get_penguins_splits()
 sklearn_pipeline = make_pipeline(params=params)
