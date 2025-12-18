@@ -1603,7 +1603,7 @@ wcwidth==0.2.13 \
     --hash=sha256:3da69048e4540d84af32131829ff948f1e022c1c6bdb8d6102117aac784f6859 \
     --hash=sha256:72ea0c06399eb286d978fdedb6923a9eb47e1c486ce63e9b4e64fc18303972b5
     # via prompt-toolkit
-xorq @ git+https://github.com/xorq-labs/xorq@4bb9484d146bd6cf40dc00d56f95209119ecf9c8
+xorq @ git+https://github.com/xorq-labs/xorq@65d6857d3c3e3c3d2ce20054a41330b247613a57
     # via xorq-template-penguins
 xorq-datafusion==0.2.4 \
     --hash=sha256:1c399d7adb9daea9b2aa1bb34c98d9c502356d8a6684b2b5c51bfd4056ac7f7c \
