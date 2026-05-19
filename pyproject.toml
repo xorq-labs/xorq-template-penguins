@@ -7,7 +7,7 @@ dependencies = [
     "pins[gcs]>=0.9.0",
     "scikit-learn>=1.7.0",
     "uv>=0.9.18",
-    "xorq[duckdb]>=0.3.1",
+    "xorq[duckdb]>=0.3.25",
 ]
 
 [build-system]
