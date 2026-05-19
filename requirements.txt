@@ -1335,7 +1335,7 @@ uv==0.11.14 \
     --hash=sha256:e84069681c0334e07cbc7f114eb09d7fe1335e1db0297a66dbca80a1b393fe6d \
     --hash=sha256:f0a8b58b38e984241bca5d7a5a47bf9ffe1ca2ab392a640887db8a04c4a9ec95 \
     --hash=sha256:f3005a2db1e8d72e125630d4f22ac4ceddb2c033e1f9b94b7f3ea38ebac46dd6
-xorq @ git+https://github.com/xorq-labs/xorq@24ffdf2677cc124e98a062b008814ff7c6928012
+xorq @ git+https://github.com/xorq-labs/xorq@cf889faa207518868ec13fa61f8c0775aa7614fb
 xorq-datafusion==0.2.7 \
     --hash=sha256:225b612874ee2da79c2a7d80ec4e7040baaf6db0f1fa364dc79b16b320fb17c0 \
     --hash=sha256:36193827af0c134b14dcf6229ffe9d064e8e8a94888373e6ecaf4c47a5ef6587 \
