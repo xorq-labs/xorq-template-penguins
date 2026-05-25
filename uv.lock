@@ -422,25 +422,6 @@ wheels = [
 ]
 
 [[package]]
-name = "dask"
-version = "2025.1.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "click" },
-    { name = "cloudpickle" },
-    { name = "fsspec" },
-    { name = "importlib-metadata", marker = "python_full_version < '3.12'" },
-    { name = "packaging" },
-    { name = "partd" },
-    { name = "pyyaml" },
-    { name = "toolz" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/ff/41/43eb54e0f6d1ba971d5adcad8f0862b327af6a2041aa134acbcec630ad43/dask-2025.1.0.tar.gz", hash = "sha256:bb807586ff20f0f59f3d36fe34eb4a95f75a1aae2a775b521de6dd53727d2063", size = 10758681, upload-time = "2025-01-17T16:54:13.728Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/91/a0/016d956a3fec193e3a5b466ca912944669c18dccc736b64a9e28ccdcc5f7/dask-2025.1.0-py3-none-any.whl", hash = "sha256:db86220c8d19bdf464cbe11a87a2c8f5d537acf586bb02eed6d61a302af5c2fd", size = 1371235, upload-time = "2025-01-17T16:54:09.918Z" },
-]
-
-[[package]]
 name = "databackend"
 version = "0.0.3"
 source = { registry = "https://pypi.org/simple" }
@@ -1040,15 +1021,6 @@ wheels = [
 ]
 
 [[package]]
-name = "locket"
-version = "1.0.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/2f/83/97b29fe05cb6ae28d2dbd30b81e2e402a3eed5f460c26e9eaa5895ceacf5/locket-1.0.0.tar.gz", hash = "sha256:5c0d4c052a8bbbf750e056a8e65ccd309086f4f0f18a2eac306a8dfa4112a632", size = 4350, upload-time = "2022-04-20T22:04:44.312Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/db/bc/83e112abc66cd466c6b83f99118035867cecd41802f8d044638aa78a106e/locket-1.0.0-py2.py3-none-any.whl", hash = "sha256:b6c819a722f7b6bd955b80781788e4a66a55628b858d347536b7e81325a3a5e3", size = 4398, upload-time = "2022-04-20T22:04:42.23Z" },
-]
-
-[[package]]
 name = "markdown-it-py"
 version = "4.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1547,11 +1519,11 @@ wheels = [
 
 [[package]]
 name = "packaging"
-version = "25.0"
+version = "26.2"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz", hash = "sha256:d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f", size = 165727, upload-time = "2025-04-19T11:48:59.673Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d7/f1/e7a6dd94a8d4a5626c03e4e99c87f241ba9e350cd9e6d75123f992427270/packaging-26.2.tar.gz", hash = "sha256:ff452ff5a3e828ce110190feff1178bb1f2ea2281fa2075aadb987c2fb221661", size = 228134, upload-time = "2026-04-24T20:15:23.917Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl", hash = "sha256:29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484", size = 66469, upload-time = "2025-04-19T11:48:57.875Z" },
+    { url = "https://files.pythonhosted.org/packages/df/b2/87e62e8c3e2f4b32e5fe99e0b86d576da1312593b39f47d8ceef365e95ed/packaging-26.2-py3-none-any.whl", hash = "sha256:5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e", size = 100195, upload-time = "2026-04-24T20:15:22.081Z" },
 ]
 
 [[package]]
@@ -1619,19 +1591,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/53/ea/e0853951be3b3e0ca41f962971816065b671ac88e257b99abcd0879198ce/parsy-2.1.tar.gz", hash = "sha256:fd5dd18d7b0b61f8275ee88665f430a20c02cf5a82d88557f35330530186d7ac", size = 45252, upload-time = "2023-02-22T15:26:55.628Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b3/05/1c84e2ebd1eb2817d92ae05a917e60e57b1c83f7b89e63c31df2cd6fcb70/parsy-2.1-py3-none-any.whl", hash = "sha256:8f18e7b11985e7802e7e3ecbd8291c6ca243d29820b1186e4c84605db4efffa0", size = 9111, upload-time = "2023-02-22T15:26:53.793Z" },
-]
-
-[[package]]
-name = "partd"
-version = "1.4.2"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "locket" },
-    { name = "toolz" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/b2/3a/3f06f34820a31257ddcabdfafc2672c5816be79c7e353b02c1f318daa7d4/partd-1.4.2.tar.gz", hash = "sha256:d022c33afbdc8405c226621b015e8067888173d85f7f5ecebb3cafed9a20f02c", size = 21029, upload-time = "2024-05-06T19:51:41.945Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/71/e7/40fb618334dcdf7c5a316c0e7343c5cd82d3d866edc100d98e29bc945ecd/partd-1.4.2-py3-none-any.whl", hash = "sha256:978e4ac767ec4ba5b86c6eaa52e5a2a3bc748a2ca839e8cc798f1cc6ce6efb0f", size = 18905, upload-time = "2024-05-06T19:51:39.271Z" },
 ]
 
 [[package]]
@@ -2465,8 +2424,8 @@ wheels = [
 
 [[package]]
 name = "xorq"
-version = "0.3.25"
-source = { git = "https://github.com/xorq-labs/xorq#cf889faa207518868ec13fa61f8c0775aa7614fb" }
+version = "0.3.26"
+source = { git = "https://github.com/xorq-labs/xorq#f46446bdda87cb62120b1452b1c35de78f51927d" }
 dependencies = [
     { name = "atpublic" },
     { name = "attrs", marker = "python_full_version < '4'" },
@@ -2474,7 +2433,6 @@ dependencies = [
     { name = "click" },
     { name = "cloudpickle" },
     { name = "cryptography" },
-    { name = "dask", marker = "python_full_version < '4'" },
     { name = "envyaml" },
     { name = "filelock" },
     { name = "geoarrow-types", marker = "python_full_version < '4'" },
@@ -2502,12 +2460,27 @@ dependencies = [
     { name = "toolz" },
     { name = "typing-extensions" },
     { name = "uv" },
+    { name = "xorq-dasher" },
     { name = "xorq-datafusion" },
 ]
 
 [package.optional-dependencies]
 duckdb = [
     { name = "duckdb" },
+]
+
+[[package]]
+name = "xorq-dasher"
+version = "0.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "attrs" },
+    { name = "toolz" },
+    { name = "xxhash" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/82/ac/95ae1d45f4ba2cb33fd3bd0ba436700bcbea4a87d1439034bc54318f5b92/xorq_dasher-0.1.0.tar.gz", hash = "sha256:a581a64257fca51cffc27899b46fdec01e2b7ea820f92e029e9b602331f9735c", size = 97783, upload-time = "2026-05-11T13:12:20.021Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/77/de/31c4ad7e6d1550ff6178201c48113bfc7e472948358028279c0f921c234d/xorq_dasher-0.1.0-py3-none-any.whl", hash = "sha256:ce019b21273e2fbbc42cade0beb66c1e297d11384806b505280e1fc80426fb06", size = 9577, upload-time = "2026-05-11T13:12:18.338Z" },
 ]
 
 [[package]]
@@ -2533,6 +2506,7 @@ name = "xorq-template-penguins"
 version = "0.1.1"
 source = { editable = "." }
 dependencies = [
+    { name = "packaging" },
     { name = "pins", extra = ["gcs"] },
     { name = "scikit-learn" },
     { name = "uv" },
@@ -2547,6 +2521,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "packaging", specifier = ">=26.2" },
     { name = "pins", extras = ["gcs"], specifier = ">=0.9.0" },
     { name = "scikit-learn", specifier = ">=1.7.0" },
     { name = "uv", specifier = ">=0.9.18" },

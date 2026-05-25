@@ -92,4 +92,4 @@ expr = test_predicted = fitted_pipeline.predict(test[features])
 if __name__ == "__pytest_main__":
     clf, score_sklearn = fit_and_score_sklearn_pipeline(sklearn_pipeline, train, test)
     score_xorq = fitted_pipeline.score_expr(test)
-    assert score_xorq == score_sklearn
+    assert score_xorq.execute() == score_sklearn

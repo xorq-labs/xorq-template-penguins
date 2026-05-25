@@ -274,9 +274,6 @@ cryptography==45.0.6 \
     --hash=sha256:f4028f29a9f38a2025abedb2e409973709c660d44319c61762202206ed577c42 \
     --hash=sha256:f68f833a9d445cc49f01097d95c83a850795921b3f7cc6488731e69bde3288da \
     --hash=sha256:fc022c1fa5acff6def2fc6d7819bbbd31ccddfe67d075331a65d9cfb28a20983
-dask==2025.1.0 ; python_full_version < '4' \
-    --hash=sha256:bb807586ff20f0f59f3d36fe34eb4a95f75a1aae2a775b521de6dd53727d2063 \
-    --hash=sha256:db86220c8d19bdf464cbe11a87a2c8f5d537acf586bb02eed6d61a302af5c2fd
 databackend==0.0.3 \
     --hash=sha256:2ded97ff85a0ca272d752fbc0513f70512d2c23325e3c72de15613df7e959ef5 \
     --hash=sha256:3f047f21b5d92dcfdc85545c679d024b6595bb10a72bd61ef514d8f5857e22f9
@@ -544,9 +541,6 @@ joblib==1.5.2 \
 linkify-it-py==2.1.0 \
     --hash=sha256:0d252c1594ecba2ecedc444053db5d3a9b7ec1b0dd929c8f1d74dce89f86c05e \
     --hash=sha256:43360231720999c10e9328dc3691160e27a718e280673d444c38d7d3aaa3b98b
-locket==1.0.0 ; python_full_version < '4' \
-    --hash=sha256:5c0d4c052a8bbbf750e056a8e65ccd309086f4f0f18a2eac306a8dfa4112a632 \
-    --hash=sha256:b6c819a722f7b6bd955b80781788e4a66a55628b858d347536b7e81325a3a5e3
 markdown-it-py==4.0.0 \
     --hash=sha256:87327c59b172c5011896038353a81343b6754500a08cd7a4973bb48c6d578147 \
     --hash=sha256:cb0a2b4aa34f932c007117b194e945bd74e0ec24133ceb5bac59009cda1cb9f3
@@ -862,9 +856,9 @@ opentelemetry-sdk==1.36.0 \
 opentelemetry-semantic-conventions==0.57b0 \
     --hash=sha256:609a4a79c7891b4620d64c7aac6898f872d790d75f22019913a660756f27ff32 \
     --hash=sha256:757f7e76293294f124c827e514c2a3144f191ef175b069ce8d1211e1e38e9e78
-packaging==25.0 ; python_full_version < '4' \
-    --hash=sha256:29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484 \
-    --hash=sha256:d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f
+packaging==26.2 \
+    --hash=sha256:5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e \
+    --hash=sha256:ff452ff5a3e828ce110190feff1178bb1f2ea2281fa2075aadb987c2fb221661
 pandas==2.3.2 \
     --hash=sha256:0064187b80a5be6f2f9c9d6bdde29372468751dfa89f4211a3c5871854cfbf7a \
     --hash=sha256:0bd281310d4f412733f319a5bc552f86d62cddc5f51d2e392c8787335c994175 \
@@ -904,9 +898,6 @@ pandas==2.3.2 \
 parsy==2.1 \
     --hash=sha256:8f18e7b11985e7802e7e3ecbd8291c6ca243d29820b1186e4c84605db4efffa0 \
     --hash=sha256:fd5dd18d7b0b61f8275ee88665f430a20c02cf5a82d88557f35330530186d7ac
-partd==1.4.2 ; python_full_version < '4' \
-    --hash=sha256:978e4ac767ec4ba5b86c6eaa52e5a2a3bc748a2ca839e8cc798f1cc6ce6efb0f \
-    --hash=sha256:d022c33afbdc8405c226621b015e8067888173d85f7f5ecebb3cafed9a20f02c
 pins==0.9.0 \
     --hash=sha256:6d209dfc97a1a19d0ed7f364341d1ae76739a2776cb127a18b307c64a1c4b4a9 \
     --hash=sha256:f34fbf057e8605119b866c562174a14fbf5129eab2153d3c268b657f0ee809b4
@@ -1335,7 +1326,10 @@ uv==0.11.14 \
     --hash=sha256:e84069681c0334e07cbc7f114eb09d7fe1335e1db0297a66dbca80a1b393fe6d \
     --hash=sha256:f0a8b58b38e984241bca5d7a5a47bf9ffe1ca2ab392a640887db8a04c4a9ec95 \
     --hash=sha256:f3005a2db1e8d72e125630d4f22ac4ceddb2c033e1f9b94b7f3ea38ebac46dd6
-xorq @ git+https://github.com/xorq-labs/xorq@cf889faa207518868ec13fa61f8c0775aa7614fb
+xorq @ git+https://github.com/xorq-labs/xorq@f46446bdda87cb62120b1452b1c35de78f51927d
+xorq-dasher==0.1.0 \
+    --hash=sha256:a581a64257fca51cffc27899b46fdec01e2b7ea820f92e029e9b602331f9735c \
+    --hash=sha256:ce019b21273e2fbbc42cade0beb66c1e297d11384806b505280e1fc80426fb06
 xorq-datafusion==0.2.7 \
     --hash=sha256:225b612874ee2da79c2a7d80ec4e7040baaf6db0f1fa364dc79b16b320fb17c0 \
     --hash=sha256:36193827af0c134b14dcf6229ffe9d064e8e8a94888373e6ecaf4c47a5ef6587 \
