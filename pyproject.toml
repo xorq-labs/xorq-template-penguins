@@ -8,7 +8,7 @@ dependencies = [
     "pins[gcs]>=0.9.0",
     "scikit-learn>=1.7.0",
     "uv>=0.9.18",
-    "xorq[duckdb]>=0.3.25",
+    "xorq[duckdb] @ LATEST",
 ]
 
 [build-system]
@@ -19,6 +19,3 @@ build-backend = "hatchling.build"
 dev = [
     "ipython>=8.37.0",
 ]
-
-[tool.uv.sources]
-xorq = { git = "https://github.com/xorq-labs/xorq" }
